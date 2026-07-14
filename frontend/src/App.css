@@ -1,0 +1,26 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  text-align: center;
+}
+
+.content h1 {
+  font-size: 3rem;
+  color: #2e7d32;
+}
+
+.content h2 {
+  margin-top: 15px;
+  color: #444;
+}
+
+.content p {
+  margin-top: 15px;
+  font-size: 18px;
+  color: #666;
+}
