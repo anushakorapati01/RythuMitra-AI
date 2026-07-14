@@ -1,26 +1,17 @@
-.app {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.services {
+    padding: 60px;
+    background: #f5fff5;
 }
 
-.content {
-  text-align: center;
+.services h2 {
+    text-align: center;
+    color: #2e7d32;
+    margin-bottom: 40px;
+    font-size: 40px;
 }
 
-.content h1 {
-  font-size: 3rem;
-  color: #2e7d32;
-}
-
-.content h2 {
-  margin-top: 15px;
-  color: #444;
-}
-
-.content p {
-  margin-top: 15px;
-  font-size: 18px;
-  color: #666;
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
 }
