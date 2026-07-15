@@ -43,3 +43,18 @@
 
     font-weight:bold;
 }
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ffd54f;
+}
+
+.nav-links a.active {
+    color: #ffd54f;
+    border-bottom: 2px solid #ffd54f;
+}
