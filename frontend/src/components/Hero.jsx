@@ -1,6 +1,10 @@
 import "../styles/Hero.css";
+import { useNavigate } from "react-router-dom";
 
 function Hero() {
+
+  const navigate = useNavigate();
+
   return (
     <section className="hero">
 
@@ -12,7 +16,10 @@ function Hero() {
 
       <div className="hero-buttons">
 
-        <button className="start-btn">
+        <button
+          className="start-btn"
+          onClick={() => navigate("/language")}
+        >
           🚀 Get Started
         </button>
 

@@ -1,0 +1,56 @@
+.language-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    background: #f4fff4;
+}
+
+.language-container h1 {
+    color: green;
+    margin-bottom: 10px;
+}
+
+.language-container p {
+    margin-bottom: 30px;
+    font-size: 18px;
+}
+
+.language-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 300px;
+}
+
+.language-btn {
+    padding: 15px;
+    font-size: 18px;
+    border: 2px solid green;
+    border-radius: 10px;
+    background: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.language-btn:hover {
+    background: green;
+    color: white;
+}
+
+.selected {
+    background: green;
+    color: white;
+}
+
+.continue-btn {
+    margin-top: 30px;
+    padding: 12px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    background: darkgreen;
+    color: white;
+    cursor: pointer;
+}
