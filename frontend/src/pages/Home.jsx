@@ -1,52 +1,56 @@
 import Hero from "../components/Hero";
 import FeatureCard from "../components/FeatureCard";
 import "../App.css";
+import useTranslation from "../hooks/useTranslation";
 
 function Home() {
+
+  const text = useTranslation();
+
   return (
     <>
       <Hero />
 
       <section className="services">
 
-        <h2>Our Services</h2>
+        <h2>{text.services.title}</h2>
 
         <div className="services-grid">
 
           <FeatureCard
             icon="🌾"
-            title="Crop Recommendation"
-            description="AI suggests the best crops based on soil and climate."
+            title={text.services.cropRecommendation}
+            description={text.services.cropDescription}
           />
 
           <FeatureCard
             icon="🍃"
-            title="Disease Detection"
-            description="Detect plant diseases by uploading an image."
+            title={text.services.diseaseDetection}
+            description={text.services.diseaseDescription}
           />
 
           <FeatureCard
             icon="🌦"
-            title="Weather Forecast"
-            description="Get real-time weather updates and alerts."
+            title={text.services.weatherForecast}
+            description={text.services.weatherDescription}
           />
 
           <FeatureCard
             icon="💧"
-            title="Irrigation Advice"
-            description="Receive smart watering recommendations."
+            title={text.services.irrigationAdvice}
+            description={text.services.irrigationDescription}
           />
 
           <FeatureCard
             icon="💰"
-            title="Market Prices"
-            description="Check current crop prices in nearby markets."
+            title={text.services.marketPrices}
+            description={text.services.marketDescription}
           />
 
           <FeatureCard
             icon="🏛"
-            title="Government Schemes"
-            description="Explore farming subsidies and government programs."
+            title={text.services.governmentSchemes}
+            description={text.services.governmentDescription}
           />
 
         </div>
@@ -55,7 +59,5 @@ function Home() {
     </>
   );
 }
-
-
 
 export default Home;

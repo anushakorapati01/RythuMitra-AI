@@ -1,7 +1,10 @@
-import { NavLink,Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "../styles/Navbar.css";
+import useTranslation from "../hooks/useTranslation";
 
 function Navbar() {
+  const text = useTranslation();
+
   return (
     <nav className="navbar">
 
@@ -10,26 +13,30 @@ function Navbar() {
       </div>
 
       <ul className="nav-links">
+
         <li>
-          <NavLink to="/">Home</NavLink>
+          <Link to="/">{text.navbar.home}</Link>
         </li>
+
         <li>
-          <NavLink to="/about">About</NavLink>
+          <Link to="/about">{text.navbar.about}</Link>
         </li>
+
         <li>
-          <NavLink to="/services">Services</NavLink>
+          <Link to="/services">{text.navbar.services}</Link>
         </li>
+
         <li>
-          <NavLink to="/contact">Contact</NavLink>
+          <Link to="/contact">{text.navbar.contact}</Link>
         </li>
+
+        <li>
+          <Link to="/login">{text.navbar.login}</Link>
+        </li>
+
       </ul>
-    <Link to="/login">
-    
-      <button className="login-btn">
-        Login
-      </button>
-    </Link>
-  </nav>
+
+    </nav>
   );
 }
 

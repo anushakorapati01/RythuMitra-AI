@@ -1,39 +1,46 @@
-import { useState } from "react";
+import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
+
+import LanguageContext from "../context/LanguageContext";
+import { translations } from "../translations";
+
 import "../styles/Language.css";
 
 function Language() {
-  const [language, setLanguage] = useState("English");
+  const { language, setLanguage } = useContext(LanguageContext);
+
   const navigate = useNavigate();
 
+  const text = translations[language];
+
   const languages = [
-    "English",
-    "తెలుగు",
-    "हिन्दी",
-    "தமிழ்",
-    "ಕನ್ನಡ"
+    { code: "English", name: "English" },
+    { code: "తెలుగు", name: "తెలుగు" },
+    { code: "हिन्दी", name: "हिन्दी" },
+    { code: "தமிழ்", name: "தமிழ்" },
+    { code: "ಕನ್ನಡ", name: "ಕನ್ನಡ" }
   ];
 
   return (
     <div className="language-container">
 
-      <h1>🌾 Welcome to RythuMitra AI</h1>
+      <h1>🌾 RythuMitra AI</h1>
 
-      <p>Choose Your Language</p>
+      <p>{text.language.title}</p>
 
       <div className="language-list">
 
         {languages.map((lang) => (
           <button
-            key={lang}
+            key={lang.code}
             className={
-              language === lang
+              language === lang.code
                 ? "language-btn selected"
                 : "language-btn"
             }
-            onClick={() => setLanguage(lang)}
+            onClick={() => setLanguage(lang.code)}
           >
-            {lang}
+            {lang.name}
           </button>
         ))}
 
@@ -41,9 +48,9 @@ function Language() {
 
       <button
         className="continue-btn"
-        onClick={() => navigate("/login")}
+        onClick={() => navigate("/")}
       >
-        Continue
+        {text.language.continue}
       </button>
 
     </div>

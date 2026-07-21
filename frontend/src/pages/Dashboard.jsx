@@ -1,43 +1,48 @@
 import DashboardCard from "../components/DashboardCard";
 import "../styles/Dashboard.css";
+import useTranslation from "../hooks/useTranslation";
 
 function Dashboard() {
+
+  const text = useTranslation();
+
   return (
     <div className="dashboard">
 
-      <h1>🌾 Welcome to RythuMitra AI</h1>
-      <p>Smart Farming Dashboard</p>
+      <h1>{text.dashboard.title}</h1>
+
+      <p>{text.dashboard.subtitle}</p>
 
       <div className="dashboard-grid">
 
         <DashboardCard
           icon="🌱"
-          title="Crop Recommendation"
+          title={text.dashboard.cropRecommendation}
         />
 
         <DashboardCard
           icon="🦠"
-          title="Disease Detection"
+          title={text.dashboard.diseaseDetection}
         />
 
         <DashboardCard
           icon="🌦"
-          title="Weather Forecast"
+          title={text.dashboard.weatherForecast}
         />
 
         <DashboardCard
           icon="💧"
-          title="Irrigation Advice"
+          title={text.dashboard.irrigationAdvice}
         />
 
         <DashboardCard
           icon="💰"
-          title="Market Prices"
+          title={text.dashboard.marketPrices}
         />
 
         <DashboardCard
           icon="🤖"
-          title="AI Assistant"
+          title={text.dashboard.aiAssistant}
         />
 
       </div>

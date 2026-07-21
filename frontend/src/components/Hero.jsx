@@ -1,18 +1,17 @@
 import "../styles/Hero.css";
 import { useNavigate } from "react-router-dom";
+import useTranslation from "../hooks/useTranslation";
 
 function Hero() {
-
   const navigate = useNavigate();
+  const text = useTranslation();
 
   return (
     <section className="hero">
 
-      <h1>🌾 Smart Farming Starts Here</h1>
+      <h1>{text.hero.title}</h1>
 
-      <p>
-        Empowering Farmers with Artificial Intelligence
-      </p>
+      <p>{text.hero.subtitle}</p>
 
       <div className="hero-buttons">
 
@@ -20,11 +19,14 @@ function Hero() {
           className="start-btn"
           onClick={() => navigate("/language")}
         >
-          🚀 Get Started
+          {text.hero.getStarted}
         </button>
 
-        <button className="learn-btn">
-          📖 Learn More
+        <button
+          className="learn-btn"
+          onClick={() => navigate("/about")}
+        >
+          {text.hero.learnMore}
         </button>
 
       </div>

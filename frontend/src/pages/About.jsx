@@ -1,19 +1,16 @@
+import useTranslation from "../hooks/useTranslation";
+
 function About() {
+
+  const text = useTranslation();
+
   return (
-    <div style={{ padding: "40px" }}>
-      <h1>About RythuMitra AI</h1>
+    <div style={{ padding: "40px", textAlign: "center" }}>
 
-      <p>
-        RythuMitra AI helps farmers use Artificial Intelligence for better
-        farming decisions.
-      </p>
+      <h1>{text.about.title}</h1>
 
-      <h2>Our Mission</h2>
+      <p>{text.about.description}</p>
 
-      <p>
-        We aim to improve agriculture by providing smart recommendations,
-        weather forecasts, disease detection, and market information.
-      </p>
     </div>
   );
 }
